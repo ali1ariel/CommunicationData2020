@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="flex justify-center mt-4">
+    <form action="/set-entrada" method="post">
+        {% csrf_token %}        
+        <div class="flex flex-col text-center">
+                {{ form }}
+                <input type="submit" value="OK" class="p-2 mt-2">
+        </div>
+    </form>
+</div>
+{% endblock content %}
